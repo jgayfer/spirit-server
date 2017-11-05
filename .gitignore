@@ -102,3 +102,4 @@ ENV/
 spirit-server.ini
 wsgi.py
 myprojectenv
+credentials.json
