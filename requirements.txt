@@ -1,0 +1,2 @@
+flask==0.12.2
+aioredis==0.3.4
