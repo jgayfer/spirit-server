@@ -14,7 +14,7 @@ with open('credentials.json') as f:
     client_id = cred_dict['client_id']
     client_secret = cred_dict['client_secret']
 
-
+@app.route("/")
 @app.route("/oauth/")
 def oauth():
 
