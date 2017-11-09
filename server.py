@@ -42,7 +42,8 @@ def oauth():
 
     # Pickle info and send to Redis
     pickled_info = pickle.dumps(user_info)
-    red.set(discord_id, pickled_info)
+    #red.set(discord_id, pickled_info)
+    red.publish(discord_id, pickled_info)
 
     return "<h1 style='color:blue'>Registration Complete!</h1>"
 
