@@ -2,7 +2,7 @@ import requests
 import json
 import pickle
 
-from flask import Flask, request
+from flask import Flask, request, redirect
 import redis
 
 
@@ -42,10 +42,9 @@ def oauth():
 
     # Pickle info and send to Redis
     pickled_info = pickle.dumps(user_info)
-    #red.set(discord_id, pickled_info)
     red.publish(discord_id, pickled_info)
 
-    return "<h1 style='color:blue'>Registration Complete!</h1>"
+    return redirect("https://www.bungie.net/", code=302)
 
 
 if __name__ == "__main__":
